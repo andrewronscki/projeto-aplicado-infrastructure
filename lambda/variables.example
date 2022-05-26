@@ -1,0 +1,43 @@
+variable "aws_region" {
+  description = "AWS region where the resources will be created"
+
+  type = object({
+    dev = string
+    prod = string
+  })
+
+  default = {
+    dev = ""
+    prod = ""
+  }
+}
+
+variable "aws_profile" {
+  type = string
+  default = ""
+}
+
+variable "bucket" {
+  description = "Bucket host configuration per workspace"
+
+  type = object({
+    dev = object({
+      name = string
+    })
+
+    prod = object({
+      name = string
+    })
+  })
+
+  default = {
+    dev = {
+      name = ""
+    }
+
+    prod = {
+      name = ""
+    }
+  }
+}
+

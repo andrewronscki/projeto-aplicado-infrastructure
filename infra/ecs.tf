@@ -5,7 +5,7 @@ resource "aws_ecs_cluster" "this" {
 }
 
 resource "aws_ecr_repository" "this" {
-  name                 = "contree-repository"
+  name = "contree-repository"
 
   tags = merge(local.common_tags, { Name = "Repository ECR Projeto Aplicado" })
 }
@@ -61,8 +61,8 @@ resource "aws_ecs_service" "this" {
 data "aws_iam_policy_document" "ecs_task_execution_role" {
   version = "2012-10-17"
   statement {
-    sid = ""
-    effect = "Allow"
+    sid     = ""
+    effect  = "Allow"
     actions = ["sts:AssumeRole"]
 
     principals {

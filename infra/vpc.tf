@@ -86,22 +86,22 @@ resource "aws_route_table" "private_a" {
   vpc_id = aws_vpc.this.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.a.id
   }
 
-  tags   = merge(local.common_tags, { Name = "Contree Route Table Private A" })
+  tags = merge(local.common_tags, { Name = "Contree Route Table Private A" })
 }
 
 resource "aws_route_table" "private_b" {
   vpc_id = aws_vpc.this.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.b.id
   }
 
-  tags   = merge(local.common_tags, { Name = "Contree Route Table Private B" })
+  tags = merge(local.common_tags, { Name = "Contree Route Table Private B" })
 }
 
 // Associando as subnets para as route tables

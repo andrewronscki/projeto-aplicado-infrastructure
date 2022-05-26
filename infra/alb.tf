@@ -7,11 +7,11 @@ resource "aws_lb" "this" {
 }
 
 resource "aws_lb_target_group" "this" {
-  name     = "contree-tg"
-  port     = 80
-  protocol = "HTTP"
+  name        = "contree-tg"
+  port        = 80
+  protocol    = "HTTP"
   target_type = "ip"
-  vpc_id   = aws_vpc.this.id
+  vpc_id      = aws_vpc.this.id
 
   health_check {
     path              = "/api/v1/healthcheck"
