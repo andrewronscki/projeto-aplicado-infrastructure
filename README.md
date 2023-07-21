@@ -24,3 +24,7 @@ Abra o terminal no diretório do projeto
 
 Para aplicar qualquer mudanças na infra acesse a documentação:
 - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
+<p align="center">
+  <img src="./infra.png" width="600" alt="Infraestrutura" />
+</p>
